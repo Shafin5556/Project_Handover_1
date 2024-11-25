@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderThrill</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Mulish:wght@200;300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/66baafa21a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <section class="navbar-content">
+            <div class="site-name">
+                <img src="Images/Group 40071 (2).png" alt="">
+                <h2 id="title">WanderThrill <span class="travel">Travel</span></h2>
+            </div>
+            <div class="navbar">
+                <ul class="navbar-item">
+                    <li><a href=""><span class="home">Home</span></a></li>
+                    <li><a href="">Packages</a></li>
+                    <li><a href="">Testimonial</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Contact</a></li>
+                    <!-- <div class="bar"><i class="fa-solid fa-bars"></i></div> -->
+                </ul>
+            </div>
+        </section>
+        <section class="background">
+            <h1 class="explore">Explore Your Travel</h1>
+            <div class="ex-detail">
+                <p class="explore-detail">Your gateway to thrilling cruises worldwide. Expert-curated journeys, detailed
+                    itineraries, and exclusive deals. Embark on your adventure today!</p>
+            </div>
+            <div class="text-field">
+                <!-- Where go: Predefined tourist locations in Bangladesh -->
+                <select class="text-area" id="location" name="location">
+                    <option value="">Select a Location</option>
+                    <option value="Cox's Bazar">Cox's Bazar</option>
+                    <option value="Sundarbans">Sundarbans</option>
+                    <option value="Bandarban">Bandarban</option>
+                    <option value="Sylhet">Sylhet</option>
+                    <option value="Rangamati">Rangamati</option>
+                    <option value="Khulna">Khulna</option>
+                    <option value="Rajshahi">Rajshahi</option>
+                    <option value="Paharpur">Paharpur</option>
+                </select>
+
+                <!-- When: Predefined date options (example) -->
+                <select class="text-area" name="when" id="when">
+                    <option value="">When</option>
+                    <option value="Spring">Spring</option>
+                    <option value="Summer">Summer</option>
+                    <option value="Autumn">Autumn</option>
+                    <option value="Winter">Winter</option>
+                </select>
+
+                <!-- Select Type: Predefined tour types -->
+                <select class="text-area" name="tourType" id="tourType">
+                    <option value="">Select Type</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="Cultural">Cultural</option>
+                    <option value="Nature">Nature</option>
+                    <option value="Beach">Beach</option>
+                    <option value="Historical">Historical</option>
+                </select>
+
+                <!-- Find button -->
+                <button class="text-area" id="find-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Find Now
+                </button>
+            </div>
+        </section>
+
+
+        <!-- Popup Modal -->
+        <div id="ticketModal" class="modal">
+            <div class="modal-content">
+                <h2>Available Tickets</h2>
+                <div id="ticketDetails">
+                    <!-- Ticket details will be dynamically injected here -->
+                </div>
+                <button class="close-btn" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+
+
+
+
+    </header>
+    <main>
+        <!-- tour section -->
+        <section class="tours">
+            <div class="tour-details">
+                <h2 class="primary-section-header">Our Popular Tours</h2>
+                <p class="primary-section-details">Embark on our popular tour, an unforgettable journey filled with
+                    breathtaking landscapes, cultural immersion, and thrilling activities. From iconic landmarks to
+                    hidden gems, experience the best of travel with expertly crafted itineraries. </p>
+                <ul class="primary-section-details">
+                    <li class="tour-place">Awe-inspiring Grand Canyon, USA.</li>
+                    <li class="tour-place">Exotic and vibrant Marrakech, Morocco.</li>
+                    <li class="tour-place">Enchanting landscapes of Queenstown, New Zealand.</li>
+                    <li>Historical and cultural richness of Kyoto, Japan.</li>
+                    <li class="tour-place">Serene beauty of the Amalfi Coast, Italy.</li>
+                    <!-- <li class="tour-place" >Knowledgeable and friendly guides providing insights into each destination.</li> -->
+                </ul>
+                <button id="tour-btn" class="btn-primary">Read More</button>
+            </div>
+            <div class="tour-img">
+                <img src="Images/Rectangle 4.png" alt="">
+            </div>
+        </section>
+
+        <!-- Choose destination section -->
+
+        <section>
+            <div class="choose-header">
+                <h2 class="primary-section-header">Choose Your Destination</h2>
+                <p class="primary-section-details">Choose us for a journey that transcends the ordinary, leaving you
+                    with cherished memories and a newfound appreciation for the wonders of the world. Your extraordinary
+                    destination awaits.</p>
+            </div>
+            <div class="first-img">
+                <img src="Images/Rectangle 5.png" alt="">
+                <img src="Images/Rectangle 8.png" alt="">
+            </div>
+            <div class="second-img">
+                <img class="srilanka" src="Images/Rectangle 6.png" alt="">
+                <img src="Images/Rectangle 7.png" alt="">
+                <img class="kashmir" src="Images/Rectangle 9.png" alt="">
+            </div>
+            <div class="third-img">
+                <img src="Images/Rectangle 11.png" alt="">
+                <img src="Images/Rectangle 10.png" alt="">
+            </div>
+            <div class="location-name">
+                <h2 class="name maldives">Maldives</h2>
+                <h2 class="name indonesia">Indonesia</h2>
+                <h2 class="name sri">Srilanka</h2>
+                <h2 class="name north">North America</h2>
+                <h2 class="name kash">Kashmir</h2>
+                <h2 class="name bd">Bangladesh</h2>
+                <h2 class="name bandar">Bandarban</h2>
+            </div>
+        </section>
+
+        <!-- why choose -->
+
+        <section>
+            <div class="why-choose">
+                <h2 class="primary-section-header">Why Choose Us</h2>
+                <P class="primary-section-details">We are offering you best hotel service,best guidance with best price
+                </P>
+            </div>
+            <div class="hotel-map">
+                <div class="choose hotel">
+                    <img src="Images/hotel.png" alt="">
+                    <h3>Handpicked Hotels</h3>
+                    <p class="primary-section-details">Discover the world with our premier tour service, where every
+                        destination is an adventure waiting to unfold. Expert guides, seamless logistics, and
+                        personalized touches ensure your journey is extraordinary. Join us for the ultimate travel
+                        experience,where every tour is a story waiting to be told. Your adventure begins here.</p>
+                </div>
+                <div class="choose map">
+                    <img src="Images/map-location.png" alt="">
+                    <h3>World Class Service</h3>
+                    <p class="primary-section-details">At our service, we pride ourselves on crafting journeys that
+                        transcend the ordinary. Immerse yourself in unparalleled comfort, seamless logistics, and
+                        curated experiences tailored to your desires. </p>
+                </div>
+            </div>
+            <div class="choose price" id="best-price">
+                <img src="Images/tag.jpg" alt="">
+                <h3>Best Price Guarantee</h3>
+                <p class="primary-section-details">Our pricing reflects a commitment to providing unparalleled value for
+                    your travel investment. With us, you can expect transparency, fair pricing, and a range of options
+                    to suit your preferences.</p>
+            </div>
+        </section>
+
+        <!-- perfect place -->
+
+        <section class="perfect">
+            <div>
+                <h2 class="primary-section-header">A Simple Perfect Place<br>To Get Lost</h2>
+                <p class="primary-section-details">Embark on a journey with us to explore the majesty of the world's
+                    most breathtaking mountains.</p>
+                <ul class="place-details">
+                    <li>Traverse iconic peaks and hidden gems with our expertly crafted itineraries, ensuring each
+                        ascent is a remarkable experience.</li>
+                    <li> Our knowledgeable guides are seasoned mountaineers, providing not only safety but also
+                        insightful narratives about the terrain, flora, and fauna</li>
+                    <!-- <li>After a day of exploration, relax in accommodations that seamlessly blend comfort with the rugged beauty of mountain landscapes.</li> -->
+                </ul>
+                <button class="btn-primary">See More</button>
+            </div>
+            <div class="place-video">
+                <video controls width="90%" src="Images/mountains.mp4"></video>
+            </div>
+        </section>
+
+        <!-- Newsletter section -->
+
+        <section class="newsletter">
+            <form class="form" action="">
+                <h3 class="form-header">Newsletter</h3>
+                <p id="form-details" class="primary-section-details">Get your daily dose of travel news & tips. Sign
+                    <br>
+                    up today!
+                </p>
+                <hr class="hr">
+                <input class="form-input" type="text" placeholder="Enter your name"><br>
+                <input class="form-input" type="email" placeholder="Enter your email"><br>
+                <button id="subs-btn">Subscribe</button>
+            </form>
+            <div>
+                <img class="newsletter-img" src="Images/Rectangle 8 (1).png" alt="">
+            </div>
+            <div class="sale">
+                <p class="sale-des">WanderThrill.com</p>
+                <h2 class="percentage">Save up to 70%</h2>
+
+            </div>
+        </section>
+
+
+        <!--Review-->
+
+        <div class="review" id="Review">
+            <h1>Customer<span>Review</span></h1>
+
+            <div class="review_box">
+                <div class="review_card">
+
+                    <div class="review_profile">
+                        <img src="Images/samnan.jpg">
+                    </div>
+
+                    <div class="review_text">
+                        <h2 class="name">Ataur Samnan</h2>
+
+                        <div class="review_icon">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+
+                        <div class="review_social">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+
+                        <p>
+                            From vibrant cities to serene mountain peaks, our tour was a whirlwind of excitement and
+                            beauty. The seamless logistics, friendly guides, and carefully curated experiences made this
+                            trip truly exceptional. Highly recommended!"
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="review_card">
+
+                    <div class="review_profile">
+                        <img src="Images/nahar.jpg">
+                    </div>
+
+                    <div class="review_text">
+                        <h2 class="name">Sabrin Nahar</h2>
+
+                        <div class="review_icon">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+
+                        <div class="review_social">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+
+                        <p>
+                            Unmatched expertise and a focus on safety made our mountain travel experience unforgettable.
+                            Breathtaking views, comfortable accommodations, and knowledgeable guides – this service
+                            exceeded our expectations!"
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="review_card">
+
+                    <div class="review_profile">
+                        <img src="Images/rony.jpg">
+                    </div>
+
+                    <div class="review_text">
+                        <h2 class="name">Adnan Rony</h2>
+
+                        <div class="review_icon">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+
+                        <div class="review_social">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+
+                        <p>
+                            Our journey with this travel company was flawless. Transparent pricing, stunning
+                            destinations, and a commitment to excellence. We couldn't have asked for a better
+                            adventure!"
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="review_card">
+
+                    <div class="review_profile">
+                        <img src="Images/samrin.jpg">
+                    </div>
+
+                    <div class="review_text">
+                        <h2 class="name">Samrin Tnajum</h2>
+
+                        <div class="review_icon">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+
+                        <div class="review_social">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+
+                        <p>
+                            Every destination was a masterpiece. The attention to detail in planning our tour was
+                            evident, making each stop memorable. Can't wait to book our next adventure with this
+                            service!"
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-name">
+            <img src="Images/Group 40071 (2).png" alt="">
+            <h3>WanderThrill <span class="travel">Travel</span></h3>
+        </div>
+        <div>
+            <p id="footer-details" class="primary-section-details">Uncover the extraordinary in every destination,
+                knowing that your adventure is in the hands of seasoned professionals. Choose us for transparent
+                pricing, unmatched quality, and a promise to create memories that last a lifetime. Your journey,
+                redefined—because you deserve the exceptional.
+            </p>
+        </div>
+        <div class="links">
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-github"></i></a>
+        </div>
+        <hr>
+        <p id="copyright" class="primary-section-details">&copy 2017, All Rights Reserved.</p>
+    </footer>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
